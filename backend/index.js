@@ -30,6 +30,9 @@ app.use('/api/bar-chart', barChartRoutes);
 app.use('/api/pie-chart', pieChartRoutes);
 app.use('/api/combined-data', combinedDataRoutes);
 
+app.get('/', (req, res) => {
+  res.send('Hello, this is your server responding!');
+});
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
